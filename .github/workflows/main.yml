@@ -24,7 +24,7 @@ jobs:
     steps:
       
       - name: Import Secrets
-        uses: hashicorp/vault-action@1.5.2
+        uses: hashicorp/vault-action@v1.5.2
         with:
           url: https://vault.eu.dev.volvoc3.com/ui/vault/secrets
           token: ${{ secrets.VAULT_TOKEN }}
