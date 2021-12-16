@@ -28,11 +28,9 @@ jobs:
         with:
           url: https://vault.eu.dev.volvoc3.com/ui/vault/secrets
           token: ${{ secrets.VAULT_TOKEN }}
-          namespace: chocolatine/iam_predmaintbucket
           secrets: |
-            secret/data/ci/aws accessKey | AWS_ACCESS_KEY_ID ;
-            secret/data/ci/aws secretKey | AWS_SECRET_ACCESS_KEY ;
-            secret/data/ci npm_token
+            chocolatine/iam_predmaintbucket aws_access_key_id | AWS_ACCESS_KEY_ID ;
+            chocolatine/iam_predmaintbucket aws_secret_access_key | AWS_SECRET_ACCESS_KEY ;
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
