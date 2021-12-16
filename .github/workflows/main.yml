@@ -28,7 +28,7 @@ jobs:
         with:
           url: https://vault.eu.dev.volvoc3.com/ui/vault/secrets
           token: ${{ secrets.VAULT_TOKEN }}
-          ns: chocolatine/iam_predmaintbucket
+          namespace: chocolatine/iam_predmaintbucket
           secrets: |
             secret/data/ci/aws accessKey | AWS_ACCESS_KEY_ID ;
             secret/data/ci/aws secretKey | AWS_SECRET_ACCESS_KEY ;
