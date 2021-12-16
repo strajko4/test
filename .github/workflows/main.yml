@@ -27,6 +27,7 @@ jobs:
         uses: hashicorp/vault-action@v2.4.0
         with:
           url: https://vault.eu.dev.volvoc3.com/ui/vault/secrets
+          method: token
           token: ${{ secrets.VAULT_TOKEN }}
           secrets: |
             chocolatine/iam_predmaintbucket aws_access_key_id | AWS_ACCESS_KEY_ID ;
