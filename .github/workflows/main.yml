@@ -22,6 +22,17 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      
+      - name: Import Secrets
+        uses: hashicorp/vault-action@1.5.2
+        with:
+          url: https://vault.eu.dev.volvoc3.com/ui/vault/secrets
+          token: ${{ secrets.VaultToken }}
+          secrets: |
+            secret/data/ci/aws accessKey | AWS_ACCESS_KEY_ID ;
+            secret/data/ci/aws secretKey | AWS_SECRET_ACCESS_KEY ;
+            secret/data/ci npm_token
+      
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
