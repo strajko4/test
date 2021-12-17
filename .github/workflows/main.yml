@@ -28,7 +28,7 @@ jobs:
         with:
           url: https://vault.eu.dev.volvoc3.com/ui/vault/secrets
           method: token
-          token: ${{ secrets.VAULT_TOKEN || github.token}}
+          token: ${{ secrets.VAULT_TOKEN}}
           namespace: partner--beda--predmaint-kv/
           secrets: |
             chocolatine/iam_predmaintbucket aws_access_key_id | AWS_ACCESS_KEY_ID ;
