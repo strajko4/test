@@ -29,11 +29,10 @@ jobs:
           url: https://vault.eu.dev.volvoc3.com/ui/vault/secrets
           method: token
           token: ${{ secrets.VAULT_TOKEN_REPO}}
-          namespace: partner--beda--predmaint-kv/
           secrets: |
-            chocolatine/iam_predmaintbucket aws_access_key_id | AWS_ACCESS_KEY_ID ;
-            chocolatine/iam_predmaintbucket aws_secret_access_key | AWS_SECRET_ACCESS_KEY ;
-            chocolatine/iam_predmaintbucket npm_token
+            partner--beda--predmaint-kv/chocolatine/iam_predmaintbucket aws_access_key_id | AWS_ACCESS_KEY_ID ;
+            partner--beda--predmaint-kv/chocolatine/iam_predmaintbucket aws_secret_access_key | AWS_SECRET_ACCESS_KEY ;
+            partner--beda--predmaint-kv/chocolatine/iam_predmaintbucket npm_token
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
