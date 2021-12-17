@@ -33,6 +33,7 @@ jobs:
           secrets: |
             chocolatine/iam_predmaintbucket aws_access_key_id | AWS_ACCESS_KEY_ID ;
             chocolatine/iam_predmaintbucket aws_secret_access_key | AWS_SECRET_ACCESS_KEY ;
+            chocolatine/iam_predmaintbucket npm_token
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
