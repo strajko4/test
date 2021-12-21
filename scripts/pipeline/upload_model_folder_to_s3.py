@@ -30,7 +30,8 @@ def main():
     print('here')
     print(os.listdir())
     for path, subdirs, files in os.walk(root):
-        print('here1')
+        print('path:' + path)
+        print('files: ' + files)
         if 'pycache' in path.split('\\')[-1]:
             continue
         print('here2')
