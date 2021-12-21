@@ -29,11 +29,11 @@ def main():
     root = "scripts/" + folder
     for path, subdirs, files in os.walk(root):
         print(path.split('/'))
-        if 'pycache' in path.split('\\')[-1]:
+        if 'pycache' in path.split('/')[-1]:
             continue
         for file in files:
             full_path = os.path.join(path, file)
-            dest_path = full_path.split('..\\')[-1].replace('\\', '/')
+            dest_path = full_path.split('scripts/')[-1]
             try:
                 print('Uploading file: ' + dest_path)
                 s3_client.upload_file(full_path,
