@@ -8,8 +8,8 @@ import boto3
 
 def main():
     print(len(sys.argv))
-    if (len(sys.argv)!=5):
-        print('Error: Required 5 arguments.')
+    if (len(sys.argv)!=6):
+        print('Error: Required 6 arguments.')
         sys.exit(1)
     
     folder = sys.argv[1]
