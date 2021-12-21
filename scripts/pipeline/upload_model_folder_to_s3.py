@@ -26,7 +26,7 @@ def main():
 
     # s3_client = session.client()
 
-    root = "..\\" + folder
+    root = "scripts/" + folder
     print('here')
     print(os.listdir())
     for path, subdirs, files in os.walk(root):
