@@ -9,7 +9,7 @@ import boto3
 def main():
     print(len(sys.argv))
     if (len(sys.argv)!=6):
-        print('Error: Required 6 arguments.')
+        print('Error: Required 5 arguments.')
         sys.exit(1)
     
     folder = sys.argv[1]
@@ -18,13 +18,13 @@ def main():
     s3_access_key = sys.argv[4]
     s3_region = sys.argv[5]
 
-    session = boto3.session(service_name = "s3",
+    s3_client = boto3.client(service_name = "s3",
         region_name = s3_region,
         aws_access_key_id = s3_access_key,
         aws_secret_access_key = s3_secret_access_key,
     )
 
-    s3_client = session.client()
+    # s3_client = session.client()
 
     root = "..\\" + folder
     for path, subdirs, files in os.walk(root):
