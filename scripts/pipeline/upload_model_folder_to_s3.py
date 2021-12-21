@@ -28,7 +28,7 @@ def main():
 
     root = "scripts/" + folder
     for path, subdirs, files in os.walk(root):
-        print(path.split('\\'))
+        print(path.split('/'))
         if 'pycache' in path.split('\\')[-1]:
             continue
         for file in files:
