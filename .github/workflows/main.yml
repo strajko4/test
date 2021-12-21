@@ -20,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Release to S3 bucket
-        run: bash scripts/pipeline/release.sh "model_folder" ${{secrets.S3_BUCKET}} ${{secrets.S3_SECRET_ACCESS_KEY}} ${{secrets.S3_ACCESS_KEY}} ${{secrets.S3_REGION}}
+        run: bash scripts/pipeline/release.sh "model_folder_test" ${{secrets.S3_BUCKET}} ${{secrets.S3_SECRET_ACCESS_KEY}} ${{secrets.S3_ACCESS_KEY}} ${{secrets.S3_REGION}}

@@ -11,4 +11,4 @@ pip3 install boto3
 
 # Run upload script
 
-python3 scripts/pipline/upload_model_folder_to_s3.py $folder $s3_bucket $s3_secret_access_key $s3_access_key $s3_region
+python3 scripts/pipeline/upload_model_folder_to_s3.py $folder $s3_bucket $s3_secret_access_key $s3_access_key $s3_region
