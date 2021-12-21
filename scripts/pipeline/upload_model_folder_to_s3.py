@@ -27,14 +27,10 @@ def main():
     # s3_client = session.client()
 
     root = "scripts/" + folder
-    print('here')
-    print(os.listdir())
     for path, subdirs, files in os.walk(root):
-        print('path:' + path)
-        print(files)
+        print(path.split('\\'))
         if 'pycache' in path.split('\\')[-1]:
             continue
-        print('here2')
         for file in files:
             full_path = os.path.join(path, file)
             dest_path = full_path.split('..\\')[-1].replace('\\', '/')
